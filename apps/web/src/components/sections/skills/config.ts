@@ -2,25 +2,24 @@ import type { Skill } from "@/types/skill";
 
 const skills: Skill[] = [
   {
-    name: "Web Development",
-    // todo: use proper thumbnail pics
-    thumbnail: "/images/skills/web-development.jpg",
-    description: `Web Development involves creating websites and web applications that are both visually appealing and highly functional. It encompasses a variety of technologies, frameworks, and best practices to ensure a seamless user experience and efficient performance.`,
+    name: "Product Design",
+    thumbnail: "/images/skills/product-design.jpg",
+    description: `Designing clear, scalable digital experiences through wireframes and prototypes, while prioritzing reusable components and design system standards that support consistent, intuitive product experiences.`,
   },
   {
-    name: "UI/UX Design",
-    thumbnail: "/images/skills/ui-ux-design.jpg",
-    description: `UI/UX Design focuses on creating delightful user experiences through visually appealing and highly functional designs. This skill includes a variety of technologies, frameworks, and best practices to enhance user satisfaction and usability.`,
+    name: "UX Research",
+    thumbnail: "/images/skills/ux-research.jpg",
+    description: `Using generative and evaluative research methods to uncover user needs, validate product decisions, map behaviors, and connect design direction to real insights through testing, analysis, and synthesis.`,
   },
   {
-    name: "Database Management",
-    thumbnail: "/images/skills/database-management.jpg",
-    description: `Database Management involves efficiently storing and organizing data. This skill covers a range of technologies, frameworks, and best practices to ensure data integrity, security, and performance.`,
+    name: "Strategy & Collaboration",
+    thumbnail: "/images/skills/strategy-collaboration.jpg",
+    description: `Partnering with product managers, engineers, marketers, stakeholders, and customer-facing teams to align priorities, communicate design decisions, support handoff, and move ideas confidently toward launch.`,
   },
   {
-    name: "Mobile Development",
-    thumbnail: "/images/skills/mobile-development.jpg",
-    description: `Mobile Development entails crafting apps for smartphones and tablets that are both visually appealing and highly functional. It includes a variety of technologies, frameworks, and best practices to provide a seamless user experience on mobile devices.`,
+    name: "Tools & Methods",
+    thumbnail: "/images/skills/tools-methods.jpg",
+    description: `Working across design, research, analytics, and collaboration tools including Figma, FigJam, UserTesting.com, Dovetail, Mixpanel, Amplitude, Hotjar, Jira, Miro, and Notion to guide product decisions.`,
   },
 ];
 
