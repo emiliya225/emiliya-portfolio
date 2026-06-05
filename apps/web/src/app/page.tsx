@@ -2,7 +2,6 @@ import Cursor from "@/components/cursor/cursor";
 import {
   About,
   Contact,
-  Footer,
   Header,
   Hero,
   Projects,
@@ -22,9 +21,6 @@ export default function Home() {
           <Skills />
           <Contact />
         </main>
-        <footer>
-          <Footer />
-        </footer>
       </div>
       <Cursor />
     </SmoothScroll>

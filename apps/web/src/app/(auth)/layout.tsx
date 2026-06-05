@@ -53,9 +53,7 @@ export default function AboutLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         {children}
-        <footer>
-          <Footer />
-        </footer>
+       
       </div>
       <Cursor />
     </SmoothScroll>

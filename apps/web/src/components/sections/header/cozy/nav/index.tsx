@@ -40,7 +40,7 @@ const Index: React.FC<IndexProps> = ({ setIsActive }) => {
             setSelectedLink={setSelectedLink}
             setIsActive={setIsActive}
           />
-          {/* <Footer /> */}
+    
         </div>
         <Image
           src={links[selectedLink.index]?.thumbnail ?? ""}
