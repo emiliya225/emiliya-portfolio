@@ -1,5 +1,5 @@
 import Cursor from "@/components/cursor/cursor";
-import { Footer, Header } from "@/components/sections";
+import { Header } from "@/components/sections";
 import SmoothScroll from "@/components/smooth-scroll";
 
 export default function ProjectLayout({
@@ -9,14 +9,12 @@ export default function ProjectLayout({
 }>) {
   return (
     <SmoothScroll>
-      {/* <Loader /> */}
       <div className="flex min-h-[100dvh] flex-col">
         <Header />
-        {children}
-        <footer>
-          <Footer />
-        </footer>
+
+        <main className="flex-1">{children}</main>
       </div>
+
       <Cursor />
     </SmoothScroll>
   );
