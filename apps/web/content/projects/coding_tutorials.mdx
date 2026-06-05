@@ -1,75 +1,413 @@
 ---
-title: Interactive Coding Tutorial Site
-description: A website offering interactive coding tutorials and challenges to help users learn programming languages through practice.
+title: Scaler API Mapping
+description: Designing a scalable workflow for mapping API-ingested sustainability data to the correct assets and meters.
 date: 2024-05-26
-website: https://example.com/
-github: https://github.com/
 tags:
-  - label: HTML
-  - label: CSS
-  - label: JavaScript
-  - label: React
-  - label: Node.js
-  - label: MongoDB
+  - label: Product Design
+  - label: UX Research
+  - label: B2B SaaS
+  - label: Complex Tables
+  - label: Multi-step Workflows
+  - label: UXQA
 ---
 
-This is a website offering interactive coding tutorials and challenges to help users learn programming languages through practice. The idea was to create a hands-on learning environment where users can improve their coding skills by solving challenges. This project enhanced my ability to create educational content and interactive web applications.
+<section className="mx-auto mt-16 max-w-7xl border-b border-border pb-20">
+  <div className="grid gap-14 md:grid-cols-[1.05fr_0.95fr]">
+    <div>
+      <div className="mb-6 flex items-center gap-3 text-sm font-bold uppercase tracking-[0.14em] text-foreground/60">
+        <IconTarget className="size-4" />
+        Project Brief
+      </div>
 
-## Features
+      <h2 className="max-w-3xl text-2xl font-medium leading-snug tracking-[-0.025em] text-foreground md:text-4xl md:leading-tight">
+        Turning manual API mapping into a clearer product workflow.
+      </h2>
 
-- **Interactive Code Editor**: Real-time feedback as users type their code.
-- **Step-by-Step Tutorials**: Comprehensive lessons with clear explanations and code examples.
-- **Challenges & Quizzes**: Test your understanding with engaging challenges and quizzes.
-- **Progress Tracking**: Users can save their progress and continue learning at their own pace.
-- **Multi-Language Support**: Tutorials for various programming languages like JavaScript, Python, and more.
+      <p className="mt-8 max-w-2xl text-lg leading-8 text-muted-foreground md:text-xl md:leading-9">
+        Designing a scalable workflow for mapping API-ingested sustainability
+        data to the correct assets and meters.
+      </p>
 
-## Tech Stack
+      <div className="mt-8 flex flex-wrap gap-2">
+        <span className="rounded-full bg-muted px-4 py-2 text-sm font-medium text-foreground">
+          Product Design
+        </span>
 
-- **Frontend**: React for building dynamic and responsive user interfaces.
-- **Backend**: Node.js with Express for handling server-side logic.
-- **Database**: MongoDB for managing user data and tutorial content.
-- **Styling**: CSS for sleek and user-friendly designs.
-- **Hosting**: Deployed on a cloud platform with CI/CD for seamless updates.
+        <span className="rounded-full bg-muted px-4 py-2 text-sm font-medium text-foreground">
+          UX Research
+        </span>
 
-## Implementation
+        <span className="rounded-full bg-muted px-4 py-2 text-sm font-medium text-foreground">
+          B2B SaaS
+        </span>
 
-### Frontend
+        <span className="rounded-full bg-muted px-4 py-2 text-sm font-medium text-foreground">
+          Complex Tables
+        </span>
 
-- Built using **React** to create modular and reusable components.
-- Interactive elements like code editors implemented using libraries like **Monaco Editor** or **CodeMirror**.
-- State management with **React Context API** or **Redux**.
+        <span className="rounded-full bg-muted px-4 py-2 text-sm font-medium text-foreground">
+          Multi-step Workflows
+        </span>
 
-### Backend
+        <span className="rounded-full bg-muted px-4 py-2 text-sm font-medium text-foreground">
+          UXQA
+        </span>
+      </div>
+    </div>
 
-- Developed with **Node.js** and **Express** to create RESTful APIs.
-- Authentication implemented with **JWT** for secure user sessions.
-- API endpoints for handling user data, progress tracking, and challenge validation.
+    <div className="grid gap-6 md:border-l md:border-border md:pl-12">
+      <div className="grid gap-3 border-b border-border pb-6">
+        <div className="flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.12em] text-foreground/70">
+          <IconPenTool className="size-4" />
+          Role
+        </div>
 
-### Database
+        <p className="text-xl font-medium leading-8 text-foreground">
+          UX/UI Design, Product Design, UXQA
+        </p>
+      </div>
 
-- **MongoDB** used for storing user details, tutorial content, and progress.
-- Optimized queries to ensure smooth and fast data retrieval.
+      <div className="grid gap-3 border-b border-border pb-6">
+        <div className="flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.12em] text-foreground/70">
+          <IconUsersRound className="size-4" />
+          Team
+        </div>
 
-### Deployment
+        <p className="text-xl font-medium leading-8 text-foreground">
+          Product Manager, Engineering Manager, Developers
+        </p>
+      </div>
 
-- Hosted on **Vercel** or **Heroku** for the frontend.
-- Backend hosted on **AWS EC2** or **Render** with **Docker** for containerization.
+      <div className="grid gap-3">
+        <div className="flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.12em] text-foreground/70">
+          <IconBuilding className="size-4" />
+          Company
+        </div>
 
-## How It Works
+        <p className="text-xl font-medium leading-8 text-foreground">
+          Scaler, an ESG data platform for real estate teams
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
-1. **User Onboarding**: Users sign up or log in to the platform.
-2. **Browse Tutorials**: Explore a list of programming tutorials categorized by skill levels.
-3. **Practice & Learn**: Use the in-browser code editor to follow lessons and solve challenges.
-4. **Track Progress**: View completed lessons and achievements in the user dashboard.
+<section className="mx-auto mt-20 max-w-7xl border-b border-border pb-24">
+  <div className="grid gap-14 md:grid-cols-[0.72fr_1.28fr]">
+    <div>
+      <div className="mb-6 flex items-center gap-3 text-sm font-bold uppercase tracking-[0.14em] text-foreground/60">
+        Problem Space
+      </div>
 
-## Challenges Faced
+      <h2 className="max-w-xl text-3xl font-semibold leading-tight tracking-[-0.04em] text-foreground md:text-4xl">
+        API ingestion still relied on manual mapping.
+      </h2>
+    </div>
 
-- Ensuring real-time feedback was accurate and responsive.
-- Designing an intuitive UI that works seamlessly across devices.
-- Handling scalability as the user base grows.
+    <div>
+      <p className="max-w-3xl text-xl leading-9 text-foreground md:text-2xl md:leading-10">
+        After API keys were configured, customer success teams still relied on
+        spreadsheets and back-and-forth communication to connect supplier data
+        to the correct Scaler assets and meters.
+      </p>
 
-## Future Enhancements
+      <p className="mt-8 max-w-3xl text-lg leading-8 text-muted-foreground md:text-xl md:leading-9">
+        This slowed implementation, increased internal effort, and created room
+        for data quality issues in a product where accurate sustainability
+        reporting is critical.
+      </p>
+    </div>
+  </div>
+</section>
 
-- Adding more programming languages like Ruby and Java.
-- Introducing collaborative coding sessions and peer challenges.
-- Gamifying the learning experience with leaderboards and badges.
+<section className="mx-auto mt-24 max-w-7xl rounded-3xl bg-foreground px-6 py-16 text-background md:px-12 md:py-20">
+  <div className="grid gap-12 md:grid-cols-[0.8fr_1.2fr]">
+    <div>
+      <div className="mb-6 text-sm font-semibold uppercase tracking-[0.12em] text-background/70">
+        Project Goals
+      </div>
+
+      <h2 className="max-w-xl text-3xl font-semibold leading-tight tracking-[-0.04em] text-background md:text-5xl">
+        Create a scalable mapping workflow for API-ingested data.
+      </h2>
+    </div>
+
+    <div className="grid gap-4 sm:grid-cols-2">
+      <div className="rounded-2xl bg-[#DFF8EA] p-6 text-[#102619]">
+        <IconEye className="size-7 text-[#4D9B65]" />
+
+        <div className="mt-6 text-sm font-semibold uppercase tracking-[0.12em] text-[#102619]/60">
+          01 Visibility
+        </div>
+
+        <p className="mt-3 text-lg font-medium leading-7">
+          Show what is mapped, unmapped, or needs attention.
+        </p>
+      </div>
+
+      <div className="rounded-2xl bg-[#DCEEFF] p-6 text-[#102235]">
+        <IconTarget className="size-7 text-[#3B82F6]" />
+
+        <div className="mt-6 text-sm font-semibold uppercase tracking-[0.12em] text-[#102235]/60">
+          02 Mapping Flow
+        </div>
+
+        <p className="mt-3 text-lg font-medium leading-7">
+          Help users connect API records to Scaler assets and meters.
+        </p>
+      </div>
+
+      <div className="rounded-2xl bg-[#FFF0C7] p-6 text-[#30230A]">
+        <IconTrendingUp className="size-7 text-[#D99A00]" />
+
+        <div className="mt-6 text-sm font-semibold uppercase tracking-[0.12em] text-[#30230A]/60">
+          03 Efficiency
+        </div>
+
+        <p className="mt-3 text-lg font-medium leading-7">
+          Reduce manual work for customer success and engineering teams.
+        </p>
+      </div>
+
+      <div className="rounded-2xl bg-[#ECE7FF] p-6 text-[#201A3A]">
+        <IconCheck className="size-7 text-[#6D5BD0]" />
+
+        <div className="mt-6 text-sm font-semibold uppercase tracking-[0.12em] text-[#201A3A]/60">
+          04 Data Quality
+        </div>
+
+        <p className="mt-3 text-lg font-medium leading-7">
+          Improve confidence in integration accuracy and reporting.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section className="mx-auto mt-28 max-w-7xl border-b border-border pb-28">
+  <div className="mb-6 text-sm font-semibold uppercase tracking-[0.12em] text-foreground/70">
+    Iterative Design
+  </div>
+
+  <div className="mb-12 grid gap-12 md:grid-cols-[0.8fr_1.2fr]">
+    <h2 className="max-w-xl text-3xl font-semibold leading-tight tracking-[-0.04em] text-foreground md:text-5xl">
+      Simplifying a dense data workflow through progressive iteration.
+    </h2>
+
+    <p className="text-lg leading-8 text-muted-foreground md:text-xl md:leading-9">
+      The overview page evolved from a nested table into a clearer system of
+      statuses, parent headers, and focused mapping actions.
+    </p>
+  </div>
+
+  <div className="rounded-3xl border border-border bg-card p-6 md:p-8">
+    <div className="grid gap-8 md:grid-cols-[1fr_auto_1fr_auto_1fr]">
+      <div>
+        <div className="mb-5 inline-flex rounded-full bg-foreground px-3 py-1 text-sm font-semibold uppercase tracking-[0.12em] text-background">
+          V1
+        </div>
+
+        <h3 className="text-lg font-semibold leading-7 text-foreground">
+          Nested table structure
+        </h3>
+
+        <p className="mt-3 text-base leading-7 text-muted-foreground">
+          Explored a nested table to show asset and meter relationships in one
+          place.
+        </p>
+
+        <div className="mt-6">
+          <ZoomableImage
+            src="/images/projects/coding_tutorials/iteration-01.jpg"
+            alt="API mapping overview V1"
+          />
+        </div>
+      </div>
+
+      <div className="hidden items-center justify-center text-muted-foreground md:flex">
+        <IconArrowRight className="size-7" />
+      </div>
+
+      <div>
+        <div className="mb-5 inline-flex rounded-full bg-foreground px-3 py-1 text-sm font-semibold uppercase tracking-[0.12em] text-background">
+          V2
+        </div>
+
+        <h3 className="text-lg font-semibold leading-7 text-foreground">
+          Separated mapping views
+        </h3>
+
+        <p className="mt-3 text-base leading-7 text-muted-foreground">
+          Separated asset and meter mapping to reduce hierarchy confusion.
+        </p>
+
+        <div className="mt-6">
+          <ZoomableImage
+            src="/images/projects/coding_tutorials/iteration-02.jpg"
+            alt="API mapping overview V2"
+          />
+        </div>
+      </div>
+
+      <div className="hidden items-center justify-center text-muted-foreground md:flex">
+        <IconArrowRight className="size-7" />
+      </div>
+
+      <div>
+        <div className="mb-5 inline-flex rounded-full bg-foreground px-3 py-1 text-sm font-semibold uppercase tracking-[0.12em] text-background">
+          V3
+        </div>
+
+        <h3 className="text-lg font-semibold leading-7 text-foreground">
+          Clearer status visibility
+        </h3>
+
+        <p className="mt-3 text-base leading-7 text-muted-foreground">
+          Prioritized statuses, parent headers, and clearer mapping actions.
+        </p>
+
+        <div className="mt-6">
+          <ZoomableImage
+            src="/images/projects/coding_tutorials/iteration-03.jpg"
+            alt="API mapping overview V3"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section className="mx-auto mt-28 max-w-7xl border-b border-border pb-28">
+  <div className="mb-6 text-sm font-semibold uppercase tracking-[0.12em] text-foreground/70">
+    Emergent Feature Needs
+  </div>
+
+  <div className="grid gap-12 md:grid-cols-[0.75fr_1.25fr]">
+    <div>
+      <h2 className="max-w-xl text-3xl font-semibold leading-tight tracking-[-0.04em] text-foreground md:text-5xl">
+        Adapting the workflow when testing revealed unnecessary repetition.
+      </h2>
+
+      <p className="mt-8 text-lg leading-8 text-muted-foreground md:text-xl md:leading-9">
+        Mid-development, testing surfaced an important concern: mapping meters
+        one by one created unnecessary repetition for users managing larger data
+        sets.
+      </p>
+    </div>
+
+    <div className="grid gap-4">
+      <div className="rounded-2xl border border-[#F7CACA] bg-[#FFF1F1] p-6 text-[#3A1111]">
+        <IconAlert className="size-7 text-[#D94A4A]" />
+
+        <div className="mt-5 text-sm font-semibold uppercase tracking-[0.12em] text-[#3A1111]/70">
+          Concern
+        </div>
+
+        <p className="mt-3 text-lg font-medium leading-8">
+          During testing, the main engineer raised an earlier concern about the
+          repetitiveness of meter mapping.
+        </p>
+      </div>
+
+      <div className="rounded-2xl border border-[#F6E1A8] bg-[#FFF8E1] p-6 text-[#352709]">
+        <IconLightbulb className="size-7 text-[#D99A00]" />
+
+        <div className="mt-5 text-sm font-semibold uppercase tracking-[0.12em] text-[#352709]/70">
+          Tradeoff
+        </div>
+
+        <p className="mt-3 text-lg font-medium leading-8">
+          The team initially chose a one-to-one mapping approach to move
+          quickly, but it became clear that the user experience would suffer.
+        </p>
+      </div>
+
+      <div className="rounded-2xl border border-[#BFE8CC] bg-[#EEF9F1] p-6 text-[#102619]">
+        <IconCheck className="size-7 text-[#4D9B65]" />
+
+        <div className="mt-5 text-sm font-semibold uppercase tracking-[0.12em] text-[#102619]/70">
+          Solution
+        </div>
+
+        <p className="mt-3 text-lg font-medium leading-8">
+          I created a bulk meter mapping solution and worked with product and
+          engineering to estimate, prioritize, and fit it into the release.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div className="mt-14 rounded-3xl border border-border bg-card p-6 md:p-8">
+    <ZoomableImage
+  src="/images/projects/coding_tutorials/emergent-feature-needs.jpg"
+  alt="Bulk meter mapping iteration"
+  />
+  </div>
+</section>
+
+<section className="mx-auto mt-28 mb-32 max-w-7xl">
+  <div className="border-b border-border pb-16">
+    <div className="mb-6 text-sm font-semibold uppercase tracking-[0.12em] text-foreground/70">
+      Release Strategy & Feedback
+    </div>
+
+    <div className="grid gap-12 md:grid-cols-[0.75fr_1.25fr]">
+      <h2 className="max-w-xl text-3xl font-semibold leading-tight tracking-[-0.04em] text-foreground md:text-5xl">
+        Validating the workflow through a staged release.
+      </h2>
+
+      <p className="text-lg leading-8 text-muted-foreground md:text-xl md:leading-9">
+        The feature was planned as a limited release across multiple stages,
+        beginning with customers who were already familiar with API flows and
+        had dedicated team members managing consumption data.
+      </p>
+    </div>
+  </div>
+
+  <div className="mt-14">
+  <div className="mb-6 text-sm font-semibold uppercase tracking-[0.12em] text-foreground/70">
+    Measuring Success
+  </div>
+
+  <div className="grid gap-4 md:grid-cols-3">
+    <div className="rounded-2xl bg-[#ECE7FF] p-6 text-[#201A3A]">
+      <IconChart className="size-7 text-[#6D5BD0]" />
+
+      <div className="mt-8 text-5xl font-semibold tracking-[-0.06em] text-[#201A3A]">
+        01
+      </div>
+
+      <p className="mt-5 text-lg font-medium leading-8 text-[#201A3A]">
+        Number of automated meters increases at a sharper rate.
+      </p>
+    </div>
+
+    <div className="rounded-2xl bg-[#ECE7FF] p-6 text-[#201A3A]">
+      <IconUsers className="size-7 text-[#6D5BD0]" />
+
+      <div className="mt-8 text-5xl font-semibold tracking-[-0.06em] text-[#201A3A]">
+        02
+      </div>
+
+      <p className="mt-5 text-lg font-medium leading-8 text-[#201A3A]">
+        Customer success help tickets related to API mappings decrease.
+      </p>
+    </div>
+
+    <div className="rounded-2xl bg-[#ECE7FF] p-6 text-[#201A3A]">
+      <IconRocket className="size-7 text-[#6D5BD0]" />
+
+      <div className="mt-8 text-5xl font-semibold tracking-[-0.06em] text-[#201A3A]">
+        03
+      </div>
+
+      <p className="mt-5 text-lg font-medium leading-8 text-[#201A3A]">
+        Qualitative feedback is documented, prioritized, and followed up
+        through interviews.
+      </p>
+    </div>
+  </div>
+</div>
+
+  
+</section>

@@ -14,9 +14,15 @@ import {
 import ProjectCard from "./project-card";
 
 function Projects() {
+  const getProjectTime = (date: unknown) => {
+    const parsedDate = date instanceof Date ? date : new Date(String(date));
+    return parsedDate.getTime();
+  };
+
   const projects = [...project.getPages()].sort(
-    (a, b) => b.data.date.getTime() - a.data.date.getTime(),
+    (a, b) => getProjectTime(b.data.date) - getProjectTime(a.data.date),
   );
+
   return (
     <MotionWrap className="w-full py-24 lg:py-32" id="projects">
       <div className="px-4 md:px-6">

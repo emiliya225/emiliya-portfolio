@@ -44,9 +44,14 @@ const jsonLd: WithContext<CollectionPage> = {
   })),
 };
 
-export default function ProjectsPage(): React.ReactElement {
+const getProjectTime = (date: unknown) => {
+  const parsedDate = date instanceof Date ? date : new Date(String(date));
+  return parsedDate.getTime();
+};
+
+export default function ProjectsPage() {
   const projects = [...project.getPages()].sort(
-    (a, b) => b.data.date.getTime() - a.data.date.getTime(),
+    (a, b) => getProjectTime(b.data.date) - getProjectTime(a.data.date),
   );
 
   return (
@@ -55,12 +60,12 @@ export default function ProjectsPage(): React.ReactElement {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+
       <section
         className="relative flex min-h-[calc(50dvh)] items-center justify-center"
         id="hero"
       >
         <div className="flex flex-col items-center md:max-w-7xl">
-          {/* todo: re-add delay of 0.2seconds */}
           <TextReveal
             as="h1"
             className="leading-wide tracking-relaxed text-5xl sm:text-6xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl"
@@ -68,9 +73,10 @@ export default function ProjectsPage(): React.ReactElement {
             My Projects
           </TextReveal>
 
-          <Line className={"mt-16"} />
+          <Line className="mt-16" />
         </div>
       </section>
+
       <section className="grid w-full grid-cols-1 gap-4 p-4 md:grid-cols-2 2xl:grid-cols-3">
         {projects.map((project, index) => (
           <ProjectCard
