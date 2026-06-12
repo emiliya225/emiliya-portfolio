@@ -111,7 +111,7 @@ export default async function ProjectPage(props0: {
           width={1280}
           height={832}
           alt={`Image of ${page.data.title}`}
-          className="my-12 aspect-video h-auto w-full rounded-2xl object-cover object-top"
+          className="my-12 aspect-video h-auto w-full rounded-2xl object-cover"
           priority
         />
 
@@ -176,7 +176,7 @@ export default async function ProjectPage(props0: {
                       width={900}
                       height={560}
                       alt={`Image of ${projectPage.data.title}`}
-                      className="h-full w-full object-contain p-3 transition duration-500 group-hover:scale-[1.04]"
+                      className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.04]"
                     />
 
                     <div className="absolute right-4 top-4 flex size-11 items-center justify-center rounded-full bg-background text-foreground shadow-sm">
