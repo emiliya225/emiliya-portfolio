@@ -110,66 +110,53 @@ tags:
   />
 </section>
 
-<section className="mx-auto mt-32 max-w-7xl">
-  <div className="rounded-3xl bg-foreground p-8 text-background md:p-12">
-    <div className="grid gap-12 md:grid-cols-[0.8fr_1.2fr]">
-      <div>
-        <div className="mb-6 flex items-center gap-3 text-sm font-bold uppercase tracking-[0.14em] text-background/70">
-          <IconLightbulb className="size-4" />
-          Project Goals
+<section className="mx-auto mt-24 max-w-7xl rounded-3xl bg-foreground px-6 py-16 text-background md:px-12 md:py-20">
+  <div className="grid gap-12 md:grid-cols-[0.8fr_1.2fr]">
+    <div>
+      <div className="mb-6 text-sm font-semibold uppercase tracking-[0.12em] text-background/70">
+        Project Goals
+      </div>
+
+      <h2 className="max-w-xl text-3xl font-semibold leading-tight tracking-[-0.04em] text-background md:text-5xl">
+        Create a flexible tagging system for organizing and finding documentation.
+      </h2>
+    </div>
+
+    <div className="grid gap-4 md:grid-cols-3">
+      <div className="rounded-2xl bg-[#DFF8EA] p-6 text-[#102619]">
+        <IconCheck className="size-7 text-[#4D9B65]" />
+
+        <div className="mt-6 text-sm font-semibold uppercase tracking-[0.12em] text-[#102619]/60">
+          01 Organization
         </div>
 
-        <h2 className="max-w-xl text-3xl font-semibold leading-tight tracking-[-0.04em] md:text-5xl">
-          Create a lightweight system for organizing docs by topic, workflow, and ownership.
-        </h2>
-
-        <p className="mt-8 text-lg leading-8 text-background/75 md:text-xl md:leading-9">
-          The project was prioritized after feedback from paying customers, requests from the Slack community, and a need to make documentation easier to browse at scale.
+        <p className="mt-3 text-lg font-medium leading-7">
+          Give users a flexible way to group docs outside of linear playlists.
         </p>
       </div>
 
-      <div className="grid gap-4">
-        <div className="rounded-3xl border border-background/15 bg-background/10 p-6">
-          <div className="mb-4 flex size-11 items-center justify-center rounded-full bg-background/10 text-background">
-            <IconCheck className="size-5" />
-          </div>
+      <div className="rounded-2xl bg-[#DCEEFF] p-6 text-[#102235]">
+        <IconEye className="size-7 text-[#3B82F6]" />
 
-          <h3 className="text-xl font-semibold tracking-[-0.03em]">
-            Improve document organization
-          </h3>
-
-          <p className="mt-3 text-lg leading-8 text-background/70">
-            Give users a flexible way to group docs outside of linear onboarding playlists.
-          </p>
+        <div className="mt-6 text-sm font-semibold uppercase tracking-[0.12em] text-[#102235]/60">
+          02 Discovery
         </div>
 
-        <div className="rounded-3xl border border-background/15 bg-background/10 p-6">
-          <div className="mb-4 flex size-11 items-center justify-center rounded-full bg-background/10 text-background">
-            <IconEye className="size-5" />
-          </div>
+        <p className="mt-3 text-lg font-medium leading-7">
+          Help teams browse, filter, and find documentation by shared metadata.
+        </p>
+      </div>
 
-          <h3 className="text-xl font-semibold tracking-[-0.03em]">
-            Make docs easier to find
-          </h3>
+      <div className="rounded-2xl bg-[#ECE7FF] p-6 text-[#201A3A]">
+        <IconTrendingUp className="size-7 text-[#6D5BD0]" />
 
-          <p className="mt-3 text-lg leading-8 text-background/70">
-            Help users browse, filter, and discover documentation through shared metadata.
-          </p>
+        <div className="mt-6 text-sm font-semibold uppercase tracking-[0.12em] text-[#201A3A]/60">
+          03 Scalability
         </div>
 
-        <div className="rounded-3xl border border-background/15 bg-background/10 p-6">
-          <div className="mb-4 flex size-11 items-center justify-center rounded-full bg-background/10 text-background">
-            <IconTrendingUp className="size-5" />
-          </div>
-
-          <h3 className="text-xl font-semibold tracking-[-0.03em]">
-            Ship in focused phases
-          </h3>
-
-          <p className="mt-3 text-lg leading-8 text-background/70">
-            Start with tagging in the editor, then expand the pattern into filtering and table management.
-          </p>
-        </div>
+        <p className="mt-3 text-lg font-medium leading-7">
+          Build a pattern that could expand from the editor into filters and tables.
+        </p>
       </div>
     </div>
   </div>
@@ -180,11 +167,11 @@ tags:
     <div>
       <div className="mb-6 flex items-center gap-3 text-sm font-bold uppercase tracking-[0.14em] text-foreground/60">
         <IconRocket className="size-4" />
-        Release Strategy
+        Solution & Release Strategy
       </div>
 
       <h2 className="max-w-xl text-3xl font-semibold leading-tight tracking-[-0.04em] text-foreground md:text-5xl">
-        We introduced tagging through three connected release phases.
+        Tags - the solution that met both user needs and developer resources.
       </h2>
 
       <p className="mt-8 text-lg leading-8 text-muted-foreground md:text-xl md:leading-9">
@@ -242,17 +229,11 @@ tags:
       </div>
     </div>
   </div>
-
-  <img
-    src="/images/projects/fitness_tracker/multi-phase-release.jpg"
-    alt="Swimm multi-phase release plan"
-    className="mt-10 w-full rounded-3xl border border-border"
-  />
 </section>
 
 <section className="mx-auto mt-32 max-w-7xl">
   <div className="overflow-hidden rounded-3xl bg-foreground text-background">
-    <div className="grid gap-10 p-8 md:grid-cols-[0.9fr_1.1fr] md:p-12">
+    <div className="grid items-start gap-12 p-8 md:grid-cols-[0.95fr_1.05fr] md:p-12">
       <div>
         <div className="mb-6 text-sm font-semibold uppercase tracking-[0.12em] text-background/70">
           Phase 1
@@ -261,83 +242,143 @@ tags:
         <h2 className="text-3xl font-semibold leading-tight tracking-[-0.04em] md:text-5xl">
           Designing tag creation inside the editor.
         </h2>
+
+        <div className="mt-8 grid gap-6">
+          <p className="text-lg leading-8 text-background/75 md:text-xl md:leading-9">
+            The first phase needed to fit within Swimm’s existing right-side panel architecture while creating a pattern that could scale into future table workflows.
+          </p>
+
+          <p className="text-lg leading-8 text-background/75 md:text-xl md:leading-9">
+            I designed a reusable tagging experience that supported creating, searching, editing, removing, and reusing tags without adding unnecessary complexity to the editor.
+          </p>
+        </div>
       </div>
 
-      <div className="grid gap-6">
-        <p className="text-lg leading-8 text-background/75 md:text-xl md:leading-9">
-          The first phase needed to fit within Swimm’s existing right-side panel architecture while creating a pattern that could scale into future table workflows.
+      <div className="flex justify-center md:justify-end">
+        <img
+          src="/images/projects/fitness_tracker/phase-1-editor.jpg"
+          alt="Swimm editor tagging design"
+          className="w-full max-w-[460px] rounded-2xl"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<section className="mx-auto mt-32 max-w-7xl">
+  <div className="overflow-hidden rounded-3xl border border-foreground/15 bg-card">
+    <div className="grid items-start gap-10 p-8 md:grid-cols-[0.9fr_1.1fr] md:p-12">
+      <div>
+        <div className="mb-6 text-sm font-semibold uppercase tracking-[0.12em] text-foreground/60">
+          Phase 2
+        </div>
+
+        <h2 className="max-w-xl text-3xl font-semibold leading-tight tracking-[-0.04em] text-foreground md:text-5xl">
+          Extending tags into a filter bar.
+        </h2>
+      </div>
+
+      <div>
+        <p className="text-lg leading-8 text-muted-foreground md:text-xl md:leading-9">
+          Once tagging existed, users needed a way to actively filter the main documentation tables by tag.
         </p>
 
-        <p className="text-lg leading-8 text-background/75 md:text-xl md:leading-9">
-          I designed a reusable tagging experience that supported creating, searching, editing, removing, and reusing tags without adding unnecessary complexity to the editor.
+        <p className="mt-6 text-lg leading-8 text-muted-foreground md:text-xl md:leading-9">
+          We compared a collapsed right-side filter panel with sticky top bar chips, then chose the chip pattern because it had stronger visibility and reused an existing component.
         </p>
       </div>
     </div>
 
+    <div className="flex justify-center px-8 pb-12">
+      <img
+        src="/images/projects/fitness_tracker/phase-2-filter-bar.jpg"
+        alt="Swimm filter bar vision design"
+        className="w-full max-w-[760px] rounded-2xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section className="mx-auto mt-32 max-w-7xl">
+  <div className="overflow-hidden rounded-3xl border border-foreground/15 bg-card">
+    <div className="grid items-start gap-10 p-8 md:grid-cols-[0.9fr_1.1fr] md:p-12">
+      <div>
+        <div className="mb-6 text-sm font-semibold uppercase tracking-[0.12em] text-foreground/60">
+          Phase 3
+        </div>
+
+        <h2 className="max-w-xl text-3xl font-semibold leading-tight tracking-[-0.04em] text-foreground md:text-5xl">
+          Bringing tag management into tables.
+        </h2>
+      </div>
+
+      <div>
+        <p className="text-lg leading-8 text-muted-foreground md:text-xl md:leading-9">
+          The final phase made the feature faster to use at scale by allowing users to create and manage tags directly from documentation tables.
+        </p>
+
+        <p className="mt-6 text-lg leading-8 text-muted-foreground md:text-xl md:leading-9">
+          To account for long document titles and dense table data, we introduced a single visible tag limit and moved additional tags into the dropdown input.
+        </p>
+      </div>
+    </div>
+
+    <div className="flex justify-center px-8 pb-12">
+      <img
+        src="/images/projects/fitness_tracker/phase-3-table-tagging.jpg"
+        alt="Swimm table tagging design"
+        className="w-full max-w-[780px] rounded-2xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section className="mx-auto mt-32 max-w-7xl border-t border-border pt-24">
+  <div className="grid gap-12 md:grid-cols-[0.8fr_1.2fr]">
+    <div>
+      <div className="mb-6 flex items-center gap-3 text-sm font-bold uppercase tracking-[0.14em] text-foreground/60">
+        <IconPenTool className="size-4" />
+        Design Spec
+      </div>
+
+      <h2 className="max-w-xl text-3xl font-semibold leading-tight tracking-[-0.04em] text-foreground md:text-5xl">
+        Translating a new component into production-ready detail.
+      </h2>
+    </div>
+
+    <div>
+      <p className="text-lg leading-8 text-muted-foreground md:text-xl md:leading-9">
+        Because this was a new component, I also included detailed specs specifying existing typography, states, and color tokens when relevant.
+      </p>
+    </div>
+  </div>
+
+  <div className="mt-10 overflow-hidden rounded-3xl border border-foreground/15 bg-card">
     <img
-      src="/images/projects/fitness_tracker/phase-1-editor.jpg"
-      alt="Swimm editor tagging design"
+      src="/images/projects/fitness_tracker/phase-1-spec.jpg"
+      alt="Swimm tag component design specification"
       className="w-full"
     />
   </div>
 </section>
 
-<section className="mx-auto mt-32 max-w-7xl">
-  <div className="grid gap-10 rounded-3xl border border-foreground/15 bg-card p-8 md:grid-cols-[0.9fr_1.1fr] md:p-12">
+<section className="mx-auto mt-32 max-w-7xl border-y border-border py-24">
+  <div className="grid gap-12 md:grid-cols-[0.8fr_1.2fr]">
     <div>
-      <div className="mb-6 text-sm font-semibold uppercase tracking-[0.12em] text-foreground/60">
-        Phase 2
+      <div className="mb-6 flex items-center gap-3 text-sm font-bold uppercase tracking-[0.14em] text-foreground/60">
+        <IconRepeat className="size-4" />
+        Reflection
       </div>
 
       <h2 className="max-w-xl text-3xl font-semibold leading-tight tracking-[-0.04em] text-foreground md:text-5xl">
-        Extending tags into a filter bar.
+        One interaction I would revisit.
       </h2>
     </div>
 
     <div>
       <p className="text-lg leading-8 text-muted-foreground md:text-xl md:leading-9">
-        Once tagging existed, users needed a way to actively filter the main documentation tables by tag.
-      </p>
-
-      <p className="mt-6 text-lg leading-8 text-muted-foreground md:text-xl md:leading-9">
-        We compared a collapsed right-side filter panel with sticky top bar chips, then chose the chip pattern because it had stronger visibility and reused an existing component.
+        Looking back, I would iterate further on the tag removal mechanism. The released implementation did not support single-click tag removal, even though analytics showed removal was one of the primary tag actions users took, especially in tables.
       </p>
     </div>
   </div>
-
-  <img
-    src="/images/projects/fitness_tracker/phase-2-filter-bar.jpg"
-    alt="Swimm filter bar vision design"
-    className="mt-8 w-full rounded-3xl border border-border"
-  />
-</section>
-
-<section className="mx-auto mt-32 max-w-7xl">
-  <div className="grid gap-10 rounded-3xl border border-foreground/15 bg-card p-8 md:grid-cols-[0.9fr_1.1fr] md:p-12">
-    <div>
-      <div className="mb-6 text-sm font-semibold uppercase tracking-[0.12em] text-foreground/60">
-        Phase 3
-      </div>
-
-      <h2 className="max-w-xl text-3xl font-semibold leading-tight tracking-[-0.04em] text-foreground md:text-5xl">
-        Bringing tag management into tables.
-      </h2>
-    </div>
-
-    <div>
-      <p className="text-lg leading-8 text-muted-foreground md:text-xl md:leading-9">
-        The final phase made the feature faster to use at scale by allowing users to create and manage tags directly from documentation tables.
-      </p>
-
-      <p className="mt-6 text-lg leading-8 text-muted-foreground md:text-xl md:leading-9">
-        To account for long document titles and dense table data, we introduced a single visible tag limit and moved additional tags into the dropdown input.
-      </p>
-    </div>
-  </div>
-
-  <img
-    src="/images/projects/fitness_tracker/phase-3-table-tagging.jpg"
-    alt="Swimm table tagging design"
-    className="mt-8 w-full rounded-3xl border border-border"
-  />
 </section>
