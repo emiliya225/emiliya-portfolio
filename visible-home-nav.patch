@@ -1,0 +1,178 @@
+diff --git a/apps/web/src/components/sections/header/cozy/header.tsx b/apps/web/src/components/sections/header/cozy/header.tsx
+index 17ca4b1..0000000 100644
+--- a/apps/web/src/components/sections/header/cozy/header.tsx
++++ b/apps/web/src/components/sections/header/cozy/header.tsx
+@@ -1,21 +1,12 @@
+-"use client";
+-
+-import { useState } from "react";
+ import { metadata as meta } from "@/app/config";
+ import MotionLink from "@/components/fancy/link";
+-import { AnimatePresence, motion } from "motion/react";
+-
+-import { background, opacity } from "./anim";
+-import Nav from "./nav";
++import { links } from "@/components/sections/header/config";
++import { motion } from "motion/react";
++
+ import styles from "./style.module.scss";
+ 
+ const Header = () => {
+-  const [isActive, setIsActive] = useState<boolean>(false);
+-
+   return (
+     <motion.header
+       className={styles.header}
+@@ -34,30 +25,17 @@ const Header = () => {
+         >
+           {meta.author.name}
+         </MotionLink>
+-        <div onClick={() => setIsActive(!isActive)} className={styles.el}>
+-          <div className={styles.label}>
+-            <motion.p
+-              variants={opacity}
+-              animate={!isActive ? "open" : "closed"}
+-            >
+-              Menu
+-            </motion.p>
+-            <motion.p variants={opacity} animate={isActive ? "open" : "closed"}>
+-              Close
+-            </motion.p>
+-          </div>
+-          <div
+-            className={`${styles.burger} ${isActive ? styles.burgerActive : ""}`}
+-          ></div>
+-        </div>
++        <nav className={styles.navLinks} aria-label="Main navigation">
++          {links
++            .filter(({ title }) => title !== "Home")
++            .map(({ title, href }) => (
++              <MotionLink key={href} href={href}>
++                {title}
++              </MotionLink>
++            ))}
++        </nav>
+       </div>
+-      <motion.div
+-        variants={background}
+-        initial="initial"
+-        animate={isActive ? "open" : "closed"}
+-        className={styles.background}
+-      ></motion.div>
+-      <AnimatePresence mode="wait">
+-        {isActive && <Nav setIsActive={setIsActive} />}
+-      </AnimatePresence>
+     </motion.header>
+   );
+ };
+diff --git a/apps/web/src/components/sections/header/cozy/style.module.scss b/apps/web/src/components/sections/header/cozy/style.module.scss
+index 49e77ce..0000000 100644
+--- a/apps/web/src/components/sections/header/cozy/style.module.scss
++++ b/apps/web/src/components/sections/header/cozy/style.module.scss
+@@ -23,7 +23,7 @@
+ 
+   .bar {
+     display: flex;
+-    justify-content: flex-end;
++    justify-content: space-between;
++    align-items: center;
+     text-transform: lowercase;
+     font-size: 12px;
+     font-weight: 400;
+@@ -39,72 +39,26 @@
+       color: hsl(var(--foreground));
+       position: absolute;
+       left: 0;
+     }
+ 
+-    .shopContainer {
++    .navLinks {
+       display: flex;
+-      gap: 30px;
+-      position: absolute;
+-      right: 0;
++      align-items: center;
++      gap: 18px;
++      margin-left: auto;
+ 
+-      .shop {
+-        display: none;
+-      }
+-    }
+-
+-    .el {
+-      display: flex;
+-      align-items: center;
+-      justify-content: center;
+-      gap: 12px;
+-      cursor: pointer;
+-
+-      .label {
+-        position: relative;
+-        display: flex;
+-        align-items: center;
+-      }
+-
+-      p {
+-        &:nth-of-type(2) {
+-          position: absolute;
+-          opacity: 0;
+-        }
+-      }
+-
+-      .burger {
+-        width: 22.5px;
+-        position: relative;
+-        pointer-events: none;
+-
+-        &::after,
+-        &::before {
+-          content: "";
+-          height: 1px;
+-          width: 100%;
+-          background-color: hsl(var(--foreground));
+-          position: relative;
+-          display: block;
+-          transition: all 1s cubic-bezier(0.76, 0, 0.24, 1);
+-        }
+-
+-        &::after {
+-          top: -4px;
+-        }
+-      
+-        &::before {
+-          top: 4px;
+-        }
+-      }
+-
+-      .burgerActive {
+-        &::after {
+-          transform: rotate(45deg);
+-          top: -1px;
+-        }
+-
+-        &::before {
+-          transform: rotate(-45deg);
+-          top: 1px;
+-        }
++      a {
++        position: static;
++        text-decoration: none;
++        color: hsl(var(--foreground));
+       }
+     }
+   }
+ }
+@@ -118,10 +72,10 @@
+     .bar {
+       font-size: 15px;
+     }
+ 
+-    .shop {
+-      display: block;
+-      cursor: pointer;
++    .navLinks {
++      gap: 30px;
+     }
+   }
+ }

@@ -1,17 +1,17 @@
 "use client";
 
-import { useState } from "react";
 import { metadata as meta } from "@/app/config";
 import MotionLink from "@/components/fancy/link";
-import { AnimatePresence, motion } from "motion/react";
+import { links } from "@/components/sections/header/config";
+import { motion } from "motion/react";
 
-import { background, opacity } from "./anim";
-import Nav from "./nav";
 import styles from "./style.module.scss";
 
-const Header = () => {
-  const [isActive, setIsActive] = useState<boolean>(false);
+const visibleLinks = links.filter((link) =>
+  ["Projects", "Resume"].includes(link.title),
+);
 
+const Header = () => {
   return (
     <motion.header
       className={styles.header}
@@ -26,38 +26,18 @@ const Header = () => {
       }}
     >
       <div className={styles.bar}>
-        <MotionLink
-          href="/"
-          className="text-md inline-flex items-center justify-center font-semibold"
-        >
+        <MotionLink href="/" className={styles.brand}>
           {meta.author.name}
         </MotionLink>
-        <div onClick={() => setIsActive(!isActive)} className={styles.el}>
-          <div className={styles.label}>
-            <motion.p
-              variants={opacity}
-              animate={!isActive ? "open" : "closed"}
-            >
-              Menu
-            </motion.p>
-            <motion.p variants={opacity} animate={isActive ? "open" : "closed"}>
-              Close
-            </motion.p>
-          </div>
-          <div
-            className={`${styles.burger} ${isActive ? styles.burgerActive : ""}`}
-          ></div>
-        </div>
+
+        <nav className={styles.navLinks} aria-label="Main navigation">
+          {visibleLinks.map((link) => (
+            <MotionLink key={link.href} href={link.href}>
+              {link.title}
+            </MotionLink>
+          ))}
+        </nav>
       </div>
-      <motion.div
-        variants={background}
-        initial="initial"
-        animate={isActive ? "open" : "closed"}
-        className={styles.background}
-      ></motion.div>
-      <AnimatePresence mode="wait">
-        {isActive && <Nav setIsActive={setIsActive} />}
-      </AnimatePresence>
     </motion.header>
   );
 };

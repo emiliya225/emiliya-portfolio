@@ -44,16 +44,11 @@ export default function SkillCard({
           borderRadius: "12px",
         }}
         className={cn(
-          "flex flex-col overflow-hidden border border-zinc-950/10 bg-white dark:border-zinc-50/10 dark:bg-zinc-900",
+          "flex min-w-0 flex-col overflow-hidden border border-zinc-950/10 bg-white dark:border-zinc-50/10 dark:bg-zinc-900",
           className,
         )}
       >
-        {/* <DialogImage
-          src="/eb-27-lamp-edouard-wilfrid-buquet.jpg"
-          alt="A desk lamp designed by Edouard Wilfrid Buquet in 1925. It features a double-arm design and is made from nickel-plated brass, aluminium and varnished wood."
-          className="h-48 w-full object-cover"
-        /> */}
-        <div className="flex grow flex-col items-end justify-between gap-4 p-6">
+        <div className="flex grow flex-col items-end justify-between gap-4 p-4 lg:p-5 xl:p-6">
           <button
             type="button"
             className="relative ml-1 flex h-10 w-10 shrink-0 scale-100 appearance-none items-center justify-center rounded-full border border-zinc-950/10 text-zinc-500 transition-colors select-none hover:bg-zinc-100 hover:text-zinc-800 focus-visible:ring-2 active:scale-[0.98] dark:border-zinc-50/10 dark:bg-zinc-900 dark:text-zinc-500 dark:hover:bg-zinc-800 dark:hover:text-zinc-50 dark:focus-visible:ring-zinc-500"
@@ -61,19 +56,19 @@ export default function SkillCard({
           >
             <Icons.add size={18} />
           </button>
-          <div className="flex w-full flex-col gap-2">
+          <div className="flex w-full min-w-0 flex-col gap-2">
             <DialogImage
               src={thumbnail ?? "/placeholder.svg"}
               alt={`An image which depicts the skill (${name})`}
-              className="h-12 w-12 object-cover object-top"
+              className="h-10 w-10 object-cover object-top lg:h-12 lg:w-12"
               style={{
                 borderRadius: "4px",
               }}
             />
-            <DialogTitle className="text-3xl leading-8 font-bold tracking-tight text-zinc-950 dark:text-zinc-50">
+            <DialogTitle className="text-2xl leading-7 font-bold tracking-tight text-zinc-950 lg:text-3xl lg:leading-8 dark:text-zinc-50">
               <TextReveal>{name}</TextReveal>
             </DialogTitle>
-            <DialogSubtitle className="text-md text-muted-foreground text-zinc-700 dark:text-zinc-400">
+            <DialogSubtitle className="text-muted-foreground text-sm text-zinc-700 lg:text-base dark:text-zinc-400">
               <TextReveal>{description ?? ""}</TextReveal>
             </DialogSubtitle>
           </div>
@@ -95,9 +90,6 @@ export default function SkillCard({
             <DialogTitle className="text-3xl leading-8 font-bold tracking-tight text-zinc-950 dark:text-zinc-50">
               {name}
             </DialogTitle>
-            {/* <DialogSubtitle className="text-zinc-700 dark:text-zinc-400">
-              {description}
-            </DialogSubtitle> */}
             <DialogDescription
               className="text-md text-muted-foreground text-zinc-700 dark:text-zinc-400"
               disableLayoutAnimation
