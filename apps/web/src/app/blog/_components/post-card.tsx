@@ -63,7 +63,7 @@ function PostCard({
             as="p"
             className="text-sm text-gray-500 dark:text-gray-400"
           >
-            {date.toDateString()}
+            {new Date(date).toDateString()}
           </TextReveal>
           {/* <div className="mt-2 flex flex-wrap gap-2">
             {tags?.map((tag, index) => (
